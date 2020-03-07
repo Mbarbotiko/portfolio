@@ -1,0 +1,26 @@
+@import "../../variableSetup.scss";
+
+.App-header {
+  animation: fadeOut 5s;
+ // animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.App-header h1 {
+  letter-spacing: .25em;
+}
+.App-header p{
+  letter-spacing: .25em;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+
+  }
+  to {
+    opacity: 0;
+   
+  } 
+  
+} 
+

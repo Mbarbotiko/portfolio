@@ -45,3 +45,31 @@ p{
 
 }
 
+.redBG{
+background-color: $red;
+}
+
+.redBorder{
+  border:solid 10px $red;
+
+}
+
+.yellowBG{
+  background-color: $yellow;
+  }
+  
+.yellowBorder{
+    border:solid 10px $yellow;  
+}
+
+.purpleBG{
+  background-color: $purple;
+  }
+  
+.purpleBorder{
+    border:solid 10px $purple;  
+}
+  
+
+  
+

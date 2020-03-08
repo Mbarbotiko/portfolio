@@ -5,13 +5,13 @@
   pointer-events: none;
   position:fixed;
   top:85vh;
-  left:90vw;;
+  left:90vw;
 }
 
 .App{
-  //background-color: #111316;
+  background-color: #111316;
    min-height: 100vh;
-   border:solid 10px $green;
+  border:solid 10px $green;
   box-sizing: border-box;
 }
 
@@ -22,3 +22,41 @@
   letter-spacing: .25em;
 }
 
+
+.redBG{
+  background-color: $redOverlay!important;
+ }
+ 
+ .redBorder{
+   border:solid 10px $red!important;
+ }
+ 
+ .yellowBG{
+   background-color: $yellowOverlay!important;
+   }
+   
+ .yellowBorder{
+     border:solid 10px $yellow!important;  
+ }
+ 
+ .purpleBG{
+   background-color: $purpleOverlay!important;
+   }
+   
+ .purpleBorder{
+     border:solid 10px $purple!important;  
+ }
+ 
+ 
+ .project-image{
+   position: fixed;
+   display:table;
+   top:0;
+   left:0;
+   min-height:100vh;
+   min-width:100vw;
+   z-index: 0;
+   opacity:0.15;
+ }
+   
+ 

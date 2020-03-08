@@ -1,8 +1,18 @@
 @import "../../variableSetup.scss";
 
 .App-header {
-  animation: fadeOut 5s;
-  animation-fill-mode: forwards;
+  opacity: 1;
+ text-align: center;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ min-height:200px;
+ min-width:700px;
+ position: absolute;
+ top: calc(50vh - (200px / 2));
+ left: calc(50vw - (700px / 2)); 
+ animation:fadeOut 5s forwards;
 }
 .App-header h1 {
   letter-spacing: .25em;
@@ -22,4 +32,8 @@
   } 
   
 } 
+
+span{
+  color:$green;
+}
 

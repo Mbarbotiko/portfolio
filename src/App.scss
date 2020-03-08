@@ -9,16 +9,8 @@
 }
 
 .App {
-  text-align: center;
- // background-image:url($image);
   background-color: #111316;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
    border:solid 10px $green;
   box-sizing: border-box;
 }

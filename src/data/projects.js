@@ -6,21 +6,24 @@ import neighborImage from '../components/images/background/proj-neighborly.jpg';
 const projects = [
     {
         title:'Pokeswitch',
-        description:'Some stuff here about pokeswitch',
+        stack:'React | Bootstrap',
+        description:'Memory game with adorbs Pokemon.  Test your memory only click on each Pokemon once.',
         image :pokeImage,
         bgColor: 'redBG',
         borderColor:'redBorder'
     },
     {
         title:'GIPHY API',
-        description:'Some informatino here about giphy',
+        stack: 'jQuery',
+        description:'Call Giphy API and append the results to the page.',
         image :giphyImage,
         bgColor: 'yellowBG',
         borderColor:'yellowBorder'
     },
     {
         title:'Neighborly',
-        description:'Yeah yeah be a good neighbor',
+        stack:'React | Bootstrap | Express | Node | Mongo',
+        description:'Social media style app where user can create profile and communicate with other users via posts on page.',
         image :neighborImage,
         bgColor: 'purpleBG',
         borderColor:'purpleBorder'

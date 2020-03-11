@@ -1,0 +1,30 @@
+@import "../../variableSetup.scss";
+
+.left-nav{
+  background: gray;
+  width:50px;
+  height:100vh;
+  position: relative;
+  left:100px;
+  top:0;
+  
+}
+
+.left-nav div{
+ float: left;
+  font-size:35px;
+ min-width:10px;
+ min-height:3px;
+ border:solid yellow 1px;
+ text-align: center;
+ clear: both;
+ padding-left:10px;
+ padding-right:10px;
+}
+
+.left-nav div:first-of-type{
+  margin-top:33vh;
+}
+.left-nav div:last-of-type{
+  transform: rotate(180deg);
+}

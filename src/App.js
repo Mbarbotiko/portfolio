@@ -1,15 +1,13 @@
 import React from 'react';
 import logo from './components/images/component-images/comp-handprint.jpg';
-//public\images\component-images
 import './App.scss';
 import Header from './components/header/header';
 //import Card from './components/cc-card/cc-card';
 import NavButton from './components/nav-button/nav-button';
+import LeftNav from './components/left-nav/left-nav';
 import projects from './data/projects';
 import './components/cc-card/cc-card.scss';
-
-//let position = 0;
-
+import TopNav from './components/top-nav/top-nav';
 
 class App extends React.Component {
   constructor(props) {
@@ -17,6 +15,7 @@ class App extends React.Component {
     this.state = {
       index: 0,
       title: projects[0].title,
+      stack:projects[0].stack,
       description: projects[0].description,
       image: projects[0].image,
       bgColor: projects[0].bgColor,
@@ -36,6 +35,7 @@ class App extends React.Component {
       {
         index: newIndex,
         title: projects[newIndex].title,
+        stack:projects[newIndex].stack,
         description: projects[newIndex].description,
         image: projects[newIndex].image,
         bgColor: projects[newIndex].bgColor,
@@ -71,12 +71,13 @@ class App extends React.Component {
        `}>
 
         <Header />
+        <TopNav/>
+        <LeftNav/>
         <img className='project-image' src={this.state.image} />
         <div className='card' >
         <NavButton onClick={this.previousProject} />
-          <h2>
-            {this.state.title}
-          </h2>
+          <h2>{this.state.title}</h2>
+          <p>{this.state.stack}</p>
           <p>{this.state.description}</p>
 
           <NavButton onClick={this.nextProject} />

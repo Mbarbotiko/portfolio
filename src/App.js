@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './components/images/component-images/comp-handprint.jpg';
 import './App.scss';
 import Header from './components/header/header';
-//import Card from './components/cc-card/cc-card';
+import Card from './components/cc-card/cc-card';
 import NavButton from './components/nav-button/nav-button';
 import LeftNav from './components/left-nav/left-nav';
 import projects from './data/projects';
@@ -15,7 +15,7 @@ class App extends React.Component {
     this.state = {
       index: 0,
       title: projects[0].title,
-      stack:projects[0].stack,
+      stack: projects[0].stack,
       description: projects[0].description,
       image: projects[0].image,
       bgColor: projects[0].bgColor,
@@ -35,7 +35,7 @@ class App extends React.Component {
       {
         index: newIndex,
         title: projects[newIndex].title,
-        stack:projects[newIndex].stack,
+        stack: projects[newIndex].stack,
         description: projects[newIndex].description,
         image: projects[newIndex].image,
         bgColor: projects[newIndex].bgColor,
@@ -48,9 +48,9 @@ class App extends React.Component {
   previousProject = () => {
     let newIndex = this.state.index
     newIndex--
-    if (newIndex ===-1) {
-      newIndex = projects.length-1;
-    } 
+    if (newIndex === -1) {
+      newIndex = projects.length - 1;
+    }
     this.setState(
       {
         index: newIndex,
@@ -67,13 +67,16 @@ class App extends React.Component {
   render() {
 
     return (
-      <div className={`App ${this.state.bgColor} ${this.state.borderColor}
-       `}>
-
+      <div className={`App ${this.state.bgColor} ${this.state.borderColor}`}>
+        <img className='project-image' src={this.state.image} />
+        <TopNav/>
+        <LeftNav/>
+        <Card/>
+        {/* 
         <Header />
         <TopNav/>
         <LeftNav/>
-        <img className='project-image' src={this.state.image} />
+     
         <div className='card' >
         <NavButton onClick={this.previousProject} />
           <h2>{this.state.title}</h2>
@@ -81,7 +84,7 @@ class App extends React.Component {
           <p>{this.state.description}</p>
 
           <NavButton onClick={this.nextProject} />
-        </div>
+        </div> */}
 
         <img src={logo} className="App-logo" alt="logo" />
       </div>

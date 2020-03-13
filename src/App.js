@@ -64,11 +64,19 @@ class App extends React.Component {
 
   }
 
+
+
   render() {
+    const someImage = 'https://images.unsplash.com/photo-1542044896530-05d85be9b11a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=925&q=80'
 
     return (
-      <div className={`App ${this.state.bgColor} ${this.state.borderColor}`}>
-        <img className='project-image' src={this.state.image} />
+      <div className={`App ${this.state.bgColor} ${this.state.borderColor}`}
+      
+      style={{backgroundImage:`url(${this.state.image})`}}
+      
+      >
+        <div className='overlay'></div>
+        {/* <img className='project-image' src={this.state.image} /> */}
         <TopNav/>
         <LeftNav/>
         <Card/>

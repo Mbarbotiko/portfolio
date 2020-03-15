@@ -3,7 +3,6 @@
    padding-left:5%;
    padding-right:5%;
    padding-bottom:5px;
-   text-align: center;
    display: inline;
  }
 
@@ -14,16 +13,40 @@ li:nth-of-type(2n+1):hover{
 
 }
  .top-nav{
-   position:absolute;
+   position: absolute;
    top:0;
    left:0;
    width:100vw;
  }
 
-
 ul{
-  display:flex;
-  justify-content: center;
- }
+  margin-left:auto;
+  width:100%;
+  text-align: center;
+}
 
+@media screen and (max-width:1250px){
+  li{
+    font-size:.75em;
+  }
 
+}
+
+@media screen and (max-width:600px)and(orientation:portrait){
+  li{
+    padding-left:1%;
+    padding-right:1%;
+    font-size:.75em;
+  }
+ 
+}
+
+@media screen and (max-width:900px)and(orientation:landscape){
+  li{
+    padding-left:2%;
+    padding-right:2%;
+    font-size:.75em;
+  }
+ 
+ 
+}

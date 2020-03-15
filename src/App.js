@@ -1,9 +1,9 @@
 import React from 'react';
 import logo from './components/images/component-images/comp-handprint.jpg';
 import './App.scss';
-import Header from './components/header/header';
+// import Header from './components/header/header';
 import Card from './components/cc-card/cc-card';
-import NavButton from './components/nav-button/nav-button';
+// import NavButton from './components/nav-button/nav-button';
 import LeftNav from './components/left-nav/left-nav';
 import projects from './data/projects';
 import './components/cc-card/cc-card.scss';
@@ -67,8 +67,6 @@ class App extends React.Component {
 
 
   render() {
-    const someImage = 'https://images.unsplash.com/photo-1542044896530-05d85be9b11a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=925&q=80'
-
     return (
       <div className={`App ${this.state.bgColor} ${this.state.borderColor}`}
       

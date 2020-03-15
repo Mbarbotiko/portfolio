@@ -1,29 +1,35 @@
 @import "../../variableSetup.scss";
 
 .left-nav{
-  background: gray;
+ // background: gray;
   width:50px;
-  // height:100vh;
   position: relative;
-  left:100px;
+  left:300px;
   top:0;
+  float: left;
+  text-align: center;
+  clear: both;
   
 }
 
-.left-nav div{
- float: left;
-  font-size:35px;
- min-width:10px;
- min-height:3px;
- text-align: center;
- clear: both;
- padding-left:10px;
- padding-right:10px;
+.dot-nav{
+width:10px;
+height:10px;
+background-color:rgb(65, 65, 65);
+border-radius: 50%;
+margin-top:50%;
+margin-bottom:50%;
+margin-left:auto;
+margin-right:auto;
 }
 
 .left-nav div:first-of-type{
-  margin-top:33vh;
+  margin-top:40vh;
 }
-.left-nav div:last-of-type{
+.left-nav div:first-of-type{
   transform: rotate(180deg);
+}
+
+.left-nav img{
+  width:25px;
 }

@@ -10,7 +10,8 @@ const projects = [
         description:'Memory game with adorbs Pokemon.  Test your memory only click on each Pokemon once.',
         image :pokeImage,
         bgColor: 'redBG',
-        borderColor:'redBorder'
+        borderColor:'redBorder',
+        navBorder:'rgb(216, 58, 58)'
     },
     {
         title:'GIPHY API',
@@ -18,7 +19,8 @@ const projects = [
         description:'Call Giphy API and append the results to the page.',
         image :giphyImage,
         bgColor: 'yellowBG',
-        borderColor:'yellowBorder'
+        borderColor:'yellowBorder',
+        navBorder:'rgb(238, 238, 36)'
     },
     {
         title:'Neighborly',
@@ -26,7 +28,8 @@ const projects = [
         description:'Social media style app where user can create profile and communicate with other users via posts on page.',
         image :neighborImage,
         bgColor: 'purpleBG',
-        borderColor:'purpleBorder'
+        borderColor:'purpleBorder',
+        navBorder:'rgb(204, 52, 204)'
     }
 ]
 

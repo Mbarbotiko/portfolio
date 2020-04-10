@@ -11,8 +11,8 @@
 .App{
   background-color: #111316;
   min-height: 100vh;
-  border:solid 10px $green;
-  box-sizing: border-box;
+  // border:solid 10px $green;
+  // box-sizing: border-box;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -20,11 +20,16 @@
 }
 
 .overlay{
-  background-color: rgba(255, 0, 0, 0.544);
-  display: table;
   height:100vh;
   width:100vw;
+  background-color: rgba(255, 0, 0, 0.544);
+ border:solid 10px $red!important;
+  box-sizing: border-box;
+  display: table;
   position: absolute;
+  left:0;
+  top:0;
+ 
 }
 
 .App-header h1 {
@@ -34,9 +39,9 @@
   letter-spacing: .25em;
 }
 
-
 .redBG{
   background-color: $redOverlay!important;
+  opacity:.85;
  }
  
  .redBorder{
@@ -45,6 +50,7 @@
  
  .yellowBG{
    background-color: $yellowOverlay!important;
+   opacity:.85;
    }
    
  .yellowBorder{
@@ -53,6 +59,7 @@
  
  .purpleBG{
    background-color: $purpleOverlay!important;
+   opacity:.85;
    }
    
  .purpleBorder{

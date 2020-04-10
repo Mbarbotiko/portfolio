@@ -1,15 +1,16 @@
 import React from 'react';
 import './top-nav.scss';
 
+
 function TopNav(props) {
   return (
    <div className = 'top-nav'>
            <ul>
-             <li>Projects</li>
+             <li style = {{borderColor:props.hover}}>Projects</li>
              <li>|</li>
-             <li>Contact</li>
+             <li style = {{borderColor:props.hover}}>Contact</li>
              <li>|</li>
-             <li>Work History</li>
+             <li style = {{borderColor:props.hover}}>Work History</li>
   
            </ul>
    </div>

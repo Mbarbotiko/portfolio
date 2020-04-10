@@ -3,7 +3,6 @@ import logo from './components/images/component-images/comp-handprint.jpg';
 import './App.scss';
 // import Header from './components/header/header';
 import Card from './components/cc-card/cc-card';
-// import NavButton from './components/nav-button/nav-button';
 import LeftNav from './components/left-nav/left-nav';
 import projects from './data/projects';
 import './components/cc-card/cc-card.scss';
@@ -14,51 +13,55 @@ class App extends React.Component {
     super(props);
     this.state = {
       index: 0,
+      page:'',
       title: projects[0].title,
       stack: projects[0].stack,
       description: projects[0].description,
       image: projects[0].image,
       bgColor: projects[0].bgColor,
-      borderColor: projects[0].borderColor
+      borderColor: projects[0].borderColor,
+      navBorder:projects[0].navBorder
 
     };
   }
 
   nextProject = () => {
-    let newIndex = this.state.index
-    newIndex++
-    if (newIndex === projects.length) {
-      newIndex = 0;
+    let NI = this.state.index
+    NI++
+    if (NI === projects.length) {
+      NI = 0;
     }
+
 
     this.setState(
       {
-        index: newIndex,
-        title: projects[newIndex].title,
-        stack: projects[newIndex].stack,
-        description: projects[newIndex].description,
-        image: projects[newIndex].image,
-        bgColor: projects[newIndex].bgColor,
-        borderColor: projects[newIndex].borderColor
+        index: NI,
+        title: projects[NI].title,
+        stack: projects[NI].stack,
+        description: projects[NI].description,
+        image: projects[NI].image,
+        bgColor: projects[NI].bgColor,
+        borderColor: projects[NI].borderColor,
+        navBorder:projects[NI].navBorder
       }
     )
 
   }
 
   previousProject = () => {
-    let newIndex = this.state.index
-    newIndex--
-    if (newIndex === -1) {
-      newIndex = projects.length - 1;
+    let NI = this.state.index
+    NI--
+    if (NI === -1) {
+      NI = projects.length - 1;
     }
     this.setState(
       {
-        index: newIndex,
-        title: projects[newIndex].title,
-        description: projects[newIndex].description,
-        image: projects[newIndex].image,
-        bgColor: projects[newIndex].bgColor,
-        borderColor: projects[newIndex].borderColor
+        index: NI,
+        title: projects[NI].title,
+        description: projects[NI].description,
+        image: projects[NI].image,
+        bgColor: projects[NI].bgColor,
+        borderColor: projects[NI].borderColor
       }
     )
 
@@ -66,30 +69,11 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className={`App ${this.state.bgColor} ${this.state.borderColor}`}
-
-        style={{ backgroundImage: `url(${this.state.image})` }}
-
-      >
-        <div className='overlay'></div>
-        {/* <img className='project-image' src={this.state.image} /> */}
-        <TopNav />
-        <LeftNav nextProjectEvent={this.nextProject.bind(this)}previousProjectEvent={this.previousProject.bind(this)} />
-        <Card title={this.state.title} description={this.state.description} />
-        {/* 
-        <Header />
-        <TopNav/>
-        <LeftNav/>
-     
-        <div className='card' >
-        <NavButton onClick={this.previousProject} />
-          <h2>{this.state.title}</h2>
-          <p>{this.state.stack}</p>
-          <p>{this.state.description}</p>
-
-          <NavButton onClick={this.nextProject} />
-        </div> */}
-
+      <div className={'App'} style={{ backgroundImage: `url(${this.state.image})` }}>
+        <div className={`overlay ${this.state.bgColor} ${this.state.borderColor}`}></div>
+        <TopNav hover = {this.state.navBorder} />
+        <LeftNav nextProjectEvent={this.nextProject.bind(this)} previousProjectEvent={this.previousProject.bind(this)} />
+        <Card title={this.state.title} description={this.state.description} stack = {this.state.stack} />
         <img src={logo} className="App-logo" alt="logo" />
       </div>
     );

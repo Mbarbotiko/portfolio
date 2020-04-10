@@ -9,7 +9,7 @@
  //IE and Edge have odd border/lack of border showing, fix bug later
 li:nth-of-type(2n+1):hover{
    cursor: pointer;
-   border-bottom:rgb(238, 89, 52) solid 4px;
+   border-bottom:solid 4px;//gets color from state
 
 }
  .top-nav{

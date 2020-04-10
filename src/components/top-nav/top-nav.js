@@ -6,7 +6,7 @@ function TopNav(props) {
   return (
    <div className = 'top-nav'>
            <ul>
-             <li style = {{borderColor:props.hover}}>Projects</li>
+             <li className = {props.active} style = {{borderColor:props.hover}}>Projects</li>
              <li>|</li>
              <li style = {{borderColor:props.hover}}>Contact</li>
              <li>|</li>

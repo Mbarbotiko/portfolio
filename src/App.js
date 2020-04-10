@@ -20,7 +20,7 @@ class App extends React.Component {
       image: projects[0].image,
       bgColor: projects[0].bgColor,
       borderColor: projects[0].borderColor,
-      navBorder:projects[0].navBorder
+      navBorder:projects[0].navBorder,
 
     };
   }
@@ -61,9 +61,15 @@ class App extends React.Component {
         description: projects[NI].description,
         image: projects[NI].image,
         bgColor: projects[NI].bgColor,
-        borderColor: projects[NI].borderColor
+        borderColor: projects[NI].borderColor,
+        navBorder:projects[NI].navBorder
       }
     )
+
+  }
+
+  activateNavigation = () =>{
+    //https://stackoverflow.com/questions/38436351/react-add-class-active-on-selected-tab
 
   }
 

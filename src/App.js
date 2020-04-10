@@ -67,15 +67,15 @@ class App extends React.Component {
   render() {
     return (
       <div className={`App ${this.state.bgColor} ${this.state.borderColor}`}
-      
-      style={{backgroundImage:`url(${this.state.image})`}}
-      
+
+        style={{ backgroundImage: `url(${this.state.image})` }}
+
       >
         <div className='overlay'></div>
         {/* <img className='project-image' src={this.state.image} /> */}
-        <TopNav/>
-        <LeftNav/>
-        <Card/>
+        <TopNav />
+        <LeftNav nextProjectEvent={this.nextProject.bind(this)}previousProjectEvent={this.previousProject.bind(this)} />
+        <Card title={this.state.title} description={this.state.description} />
         {/* 
         <Header />
         <TopNav/>

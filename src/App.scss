@@ -19,18 +19,32 @@
 
 }
 
-.overlay{
-  height:100vh;
-  width:100vw;
-  background-color: rgba(255, 0, 0, 0.544);
- border:solid 10px $red!important;
-  box-sizing: border-box;
-  display: table;
-  position: absolute;
-  left:0;
-  top:0;
- 
+.contact{
+  background-color: green;
 }
+
+.history{
+  background-color: blue;
+}
+
+
+.projects{
+  background-color: yellow;
+}
+
+
+// .overlay{
+//   height:100vh;
+//   width:100vw;
+//   background-color: rgba(255, 0, 0, 0.544);
+//  border:solid 10px $red!important;
+//   box-sizing: border-box;
+//   display: table;
+//   position: absolute;
+//   left:0;
+//   top:0;
+ 
+// }
 
 .App-header h1 {
   letter-spacing: .25em;

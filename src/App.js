@@ -27,6 +27,8 @@ class App extends React.Component {
   }
 
 
+
+
   // nextProject = () => {
   //   let NI = this.state.index
   //   NI++
@@ -75,13 +77,27 @@ class App extends React.Component {
 
   }
 
+  navClick = (page) => {
+    console.log(page)
+    switch (page) {
+      case 'projects': console.log('run some function to set state and update the page to show projects content')
+        break;
+      case 'history': console.log('run some function here to update state and show work history')
+        break;
+      case 'contact': console.log('run some function here to update state and show contact information')
+        break;
+      default: console.log('navigation error')
+    }
+    console.log('click')
+  }
+
   render() {
     return (
       <div className={`App ${this.state.bgColor}`}
-       // style={{ backgroundImage: `url(${this.state.image})` }}
+      // style={{ backgroundImage: `url(${this.state.image})` }}
       >
         <div className={`overlay ${this.state.bgColor} ${this.state.borderColor}`}></div>
-        <TopNav hover={this.state.navBorder} />
+        <TopNav hover={this.state.navBorder} navClick={this.navClick} />
         {/* <LeftNav nextProjectEvent={this.nextProject.bind(this)} previousProjectEvent={this.previousProject.bind(this)} /> */}
         {/* <Card title={this.state.title} description={this.state.description} stack = {this.state.stack} /> */}
         {/* <img src={logo} className="App-logo" alt="logo" /> */}

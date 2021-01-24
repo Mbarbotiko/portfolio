@@ -1,8 +1,8 @@
 const appState = {
     projects:{
-        navMessage :'Projects',
-        page: 'projects',
-        bgColor:'projects'
+        navMessage :'Projects',//text in navigation
+        page: 'projects',//which page to pass to function
+        bgColor:'projects'//class in App.scss
     },
     contact:{
         navMessage :'About Me',

@@ -17,7 +17,7 @@ function TopNav(props) {
   return (
     <div className='top-nav'>
       <ul>
-        <li onClick={() => props.navClick(projectsPage)} id='hello' className={props.active} style={{ borderColor: props.hover }}>{projects}</li>
+        <li onClick={() => props.navClick(projectsPage)} className={props.active} style={{ borderColor: props.hover }}>{projects}</li>
         <li>|</li>
         <li onClick={() => props.navClick(contactPage)} style={{ borderColor: props.hover }}>{contact}</li>
         <li>|</li>

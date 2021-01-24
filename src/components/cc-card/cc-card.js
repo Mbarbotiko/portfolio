@@ -8,8 +8,8 @@ const Card = (props)=>{
   return(
     <div className='card'>
     <h2>{props.title}</h2>
-    <p>{props.stack}</p>
-    <p>{props.description}</p>
+    {/* <p>{props.stack}</p>
+    <p>{props.description}</p> */}
     </div>
   )
 }

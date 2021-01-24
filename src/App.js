@@ -2,7 +2,7 @@ import React from 'react';
 //import logo from './components/images/component-images/comp-handprint.jpg';
 import './App.scss';
 // import Header from './components/header/header';
-//import Card from './components/cc-card/cc-card';
+import Card from './components/cc-card/cc-card';
 //import LeftNav from './components/left-nav/left-nav';
 //import projects from './data/projects';
 import appState from './data/appState';
@@ -40,15 +40,30 @@ class App extends React.Component {
 
 
   render() {
+    const test1 = <Card title='TEST1'/>//pull down other components put into a variable then return
+    //based on app state create conditional rendering here
+    const test2 = <Card title='TEST2'/>
+    const test3 = <Card title='TEST3'/>
+    let testingCard = '';
+    if(this.state.page==='projects'){
+      testingCard = test1;
+    }
+    if(this.state.page==='contact'){
+      testingCard = test2;
+    }
+    if(this.state.page==='history'){
+      testingCard = test3;
+    }
     return (
       <div className={`App ${this.state.bgColor}`}
       // style={{ backgroundImage: `url(${this.state.image})` }}
       >
+
+        
         <div className={`overlay ${this.state.bgColor} ${this.state.borderColor}`}></div>
         <TopNav hover={this.state.navBorder} navClick={this.navClick} />
-        {/* <LeftNav nextProjectEvent={this.nextProject.bind(this)} previousProjectEvent={this.previousProject.bind(this)} /> */}
-        {/* <Card title={this.state.title} description={this.state.description} stack = {this.state.stack} /> */}
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        {testingCard}
+
       </div>
     );
   }

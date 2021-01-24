@@ -13,57 +13,52 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      page: appState.contact,
+      page: appState.contact.page,
       bgColor: appState.contact.bgColor
     };
   }
 
-  projectsPage = () => {
-    this.setState({
-      page: appState.projects.page,
-      bgColor: appState.projects.bgColor
-    })
-
-  }
-
   switchPageview = (pageName) => {
-    this.setState({
-      page: appState[pageName].page,//use object key (string from appState to switch page view and access the properties per which page user is accessing)
-      bgColor: appState[pageName].bgColor
-    })
+    //need to check state so not clickable if on the sae page:
+    if (this.state.page !== appState[pageName].page) {
+      console.log('click ran')
+      this.setState({
+        page: appState[pageName].page,//use object key (string from appState to switch page view and access the properties per which page user is accessing)
+        bgColor: appState[pageName].bgColor
+      })
+    }
+
 
   }
   navClick = (page) => {
     this.switchPageview(page);
-  
+
   }
 
 
   render() {
-    const test1 = <Card title='TEST1'/>//pull down other components put into a variable then return
+    const projectsView = <Card title='Projects Card' />//pull down other components put into a variable then return
     //based on app state create conditional rendering here
-    const test2 = <Card title='TEST2'/>
-    const test3 = <Card title='TEST3'/>
-    let testingCard = '';
-    if(this.state.page==='projects'){
-      testingCard = test1;
+    const contactView = <Card title='Contact Card' />
+    const historyView = <Card title='History Card' />
+    let view;
+    if (this.state.page === 'projects') {
+      view = projectsView;
     }
-    if(this.state.page==='contact'){
-      testingCard = test2;
+    if (this.state.page === 'contact') {
+      view = contactView;
     }
-    if(this.state.page==='history'){
-      testingCard = test3;
+    if (this.state.page === 'history') {
+      view = historyView;
     }
+
     return (
       <div className={`App ${this.state.bgColor}`}
       // style={{ backgroundImage: `url(${this.state.image})` }}
       >
-
-        
         <div className={`overlay ${this.state.bgColor} ${this.state.borderColor}`}></div>
         <TopNav hover={this.state.navBorder} navClick={this.navClick} />
-        {testingCard}
-
+        {view}
       </div>
     );
   }
